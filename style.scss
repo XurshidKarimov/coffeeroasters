@@ -1,0 +1,280 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;700&family=Fraunces:opsz,wght@9..144,900&display=swap');
+@import "nullstyle.scss";
+
+body {
+    font-family: 'Barlow', sans-serif;
+    background-color: #FEFCF7;
+}
+
+a {
+    display: inline-block;
+}
+
+h1,
+h2,
+h3,
+.btn,
+.howwork-content__cardblock__card__number {
+    font-family: 'Fraunces', sans-serif;
+}
+
+.container {
+    max-width: 1310px;
+    padding: 0 15px;
+    margin: auto;
+}
+
+.main-content {
+    padding: 0 85px;
+}
+
+.links {
+    @include font(12, 700, 15, uppercase, #83888F);
+    letter-spacing: .92px;
+}
+
+
+.btn {
+    padding: 15px 30px;
+    background-color: #0E8784;
+    @include font(18, 900, 25, none, #FEFCF7);
+    border-radius: 5px;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 99999;
+    background-color: #FEFCF7;
+
+    & .header-content {
+        @include flex(center, space-between);
+        padding-top: 43.5px;
+        padding-bottom: 43.5px;
+
+        &__navbar {
+            @include flex($cGap: 33px);
+        }
+    }
+}
+
+main {
+    margin-top: 113px;
+
+    & .main-page {
+        background: url(./assets/img/mainbgdef.png) center center / 100% no-repeat;
+    }
+
+    & .main-page__content {
+        @include flex($aItems: baseline, $jContent: center, $fDirection: column);
+        margin-bottom: 135px;
+        min-height: 600px;
+
+        &__textblock {
+            max-width: 493px;
+
+            &__title {
+                @include font(72, 900, 72, none, #FEFCF7);
+                margin-bottom: 32px;
+            }
+
+            &__subtitle {
+                @include font(16, 400, 26, none, #FEFCF7);
+                margin-bottom: 56px;
+                opacity: .8;
+            }
+        }
+    }
+
+    & .our-collection {
+        margin-bottom: 200px;
+
+        &__content {
+            position: relative;
+
+            &__title {
+                background: linear-gradient(180deg, black, white);
+                background-clip: text;
+                @include font(150, 900, normal, none, transparent);
+                opacity: .3;
+                text-align: center;
+            }
+
+            &__card-block {
+                @include flex($jContent: center, $cGap: 30px);
+                margin-top: -7%;
+                z-index: 11111;
+                flex-wrap: wrap;
+
+                &__card {
+                    width: 255px;
+                    padding-bottom: 5px;
+
+                    &__imgbox {
+                        width: 100%;
+                        height: 193px;
+                        margin-bottom: 72px;
+
+                        & img {
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+
+                    &__textblock {
+                        text-align: center;
+
+                        &__title {
+                            @include font(24, 900, 32, capitalize, #333D4B);
+                            margin-bottom: 24px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    & .whychoose {
+        background-color: #333D4B;
+        margin-bottom: 350px;
+        border-radius: 5px;
+
+        & .whychoose-content {
+            padding-top: 100px;
+            height: 577px;
+            position: relative;
+
+            &__textblock {
+                max-width: 540px;
+                position: relative;
+                left: 50%;
+                transform: translateX(-50%);
+                text-align: center;
+
+                &__title {
+                    @include font(40, 900, 48, none, #FEFCF7);
+                    margin-bottom: 32px;
+                }
+
+                &__subtitle {
+                    @include font(16, 400, 26, none, #FEFCF7);
+                    opacity: .8;
+                }
+            }
+
+            &__cardblock {
+                @include flex($jContent: center, $cGap: 30px, $rGap: 24px);
+                flex-wrap: wrap;
+                margin-top: 8%;
+
+                &__card {
+                    width: 350px;
+                    padding: 72px 34px 48px;
+                    background-color: #0E8784;
+                    border-radius: 8px;
+                    @include flex(center, $fDirection: column);
+
+                    &__imgbox {
+                        width: 71px;
+                        height: 72px;
+                        margin-bottom: 56px;
+
+                        & img {
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+
+                    &__textblock {
+                        text-align: center;
+
+                        &__title {
+                            @include font(24, 900, 32, none, #FEFCF7);
+                            margin-bottom: 24px;
+                        }
+
+                        &__subtitle {
+                            @include font(16, 400, 26, none, #FEFCF7);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    & .howwork {
+        margin-bottom: 200px;
+
+        &-content {
+            &__title {
+                @include font(24, 900, 32, none, #83888F);
+                margin-bottom: 80px;
+            }
+
+            &__title+img {
+                margin-bottom: 67px;
+            }
+
+            &__cardblock {
+                @include flex($cGap: 90px);
+                margin-bottom: 64px;
+
+                &__card {
+                    padding-top: 3px;
+                    padding-bottom: 3px;
+
+                    &__number {
+                        @include font(72, 900, 72, none, #FDD6BA);
+                        display: inline-block;
+                        margin-bottom: 38px;
+                    }
+
+                    &__title {
+                        @include font(32, 900, 36, none, #333D4B);
+                        margin-bottom: 42px;
+                    }
+
+                    &__subtitle {
+                        @include font(16, 400, 26, none, #333D4B);
+                    }
+                }
+
+                &__card:first-child h3 {
+                    max-width: 255px;
+                }
+            }
+
+            &__btn {
+                justify-self: baseline;
+            }
+        }
+    }
+}
+
+footer {
+    background: #2C343E;
+
+    & .footer-content {
+        padding-top: 47px;
+        padding-bottom: 47px;
+        @include flex(center, space-between);
+
+        &__start {
+            @include flex(center, $cGap: 103px);
+
+            &__links {
+                @include flex(center, $cGap: 33px);
+            }
+        }
+
+        &__social {
+            @include flex(center, $cGap: 24px);
+
+            & a:hover svg path {
+                transition: .2s linear;
+                fill: #FDD6BA;
+            }
+        }
+    }
+}
